@@ -12,7 +12,7 @@ public class Driver
         int answer;
         
         System.out.println("Please choose from the following menu of choices: \n" + 
-                "\n 1. Enter Teams \n 2. Enter Scores \n 3. Top Scores \n 3. Quit \n What is your choice?");
+                "\n 1. Enter Teams \n 2. Enter Scores \n 3. Top Scores \n 4. Quit \n What is your choice?");
         
         answer = input.nextInt();
         input.nextLine();
@@ -80,7 +80,7 @@ public class Driver
             }
             
             System.out.println("Please choose from the following menu of choices: \n" + 
-                    "\n 1. Enter Teams \n 2. Enter Scores \n 3. Top Scores \n 3. Quit \n What is your choice?");
+                    "\n 1. Enter Teams \n 2. Enter Scores \n 3. Top Scores \n 4. Quit \n What is your choice?");
             
             answer = input.nextInt();
             input.nextLine();
