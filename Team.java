@@ -66,7 +66,7 @@ public class Team
     
     public String toString()
     {
-        String output = "Team Number: "+ teamNumber + "Team Name: " + name + "Team Score: " + score;
+        String output = "Team Number: "+ teamNumber + " Team Name: " + name + " Team Score: " + score;
         return output;
     }
 }
