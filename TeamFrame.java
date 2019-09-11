@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,10 +18,8 @@ public class TeamFrame extends JFrame
     private JButton exitButton;
     /** MesonetMain panel */
     private CollegeBowlMainPanel banner;
-    /** input panel */
-    private InputPanel inputPanel;
-    /** output panel */
-    private OutputPanel outputPanel;
+    /** TeamEnter Panel */
+    private TeamEnterPanel Tpanel;
     
     
     /** serial number */
@@ -30,15 +29,16 @@ public class TeamFrame extends JFrame
     {
         super("Input Teams");
         // styling for frame 
+        setPreferredSize(new Dimension(300,200));
         setLayout(new BorderLayout());
         setResizable(true);
         buildButtonPanel();
         banner = new CollegeBowlMainPanel();
-        inputPanel = new InputPanel();
-        outputPanel = new OutputPanel();
+        Tpanel = new TeamEnterPanel();
         
         
         add(banner, BorderLayout.PAGE_START);
+        add(Tpanel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.PAGE_END);
         //add(inputPanel, BorderLayout.LINE_START);
         //add(outputPanel, BorderLayout.CENTER);
