@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 
 public class Team
 {
     private int score = 0;
+    private ArrayList<Integer> questions = new ArrayList<Integer>();
     private int teamNumber = 0;
     private String name;
     
@@ -13,6 +15,7 @@ public class Team
     
     public void addScore(int score)
     {
+        questions.add(score);
         this.score = this.score + score;
     }
 
@@ -39,6 +42,14 @@ public class Team
     {
         return name;
     }
+    
+    /**
+     * @return the question
+     */
+    public int getQuestionNum(int index)
+    {
+        return questions.get(index - 1);
+    }
 
     /**
      * @param score the score to set
@@ -62,6 +73,14 @@ public class Team
     public void setTeamNumber(int score)
     {
         this.score = score;
+    }
+    
+    /**
+     * @return the question
+     */
+    public int setQuestionNum(int index, int score)
+    {
+        return questions.set(index, score);
     }
     
     public String toString()
