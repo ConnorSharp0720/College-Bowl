@@ -1,6 +1,10 @@
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -24,7 +28,7 @@ public class TeamEnterPanel extends JPanel
         setLayout(new GridLayout(2,1));
         
         JTextField teamName = new JTextField();
-        
+        teamName.addActionListener(new textListener());
         
         //Creates, adds and styles the Panel
         resultDescription = new JTextArea(COLUMN_FIELD_HEIGHT, COLUMN_FIELD_WIDTH);
@@ -33,5 +37,14 @@ public class TeamEnterPanel extends JPanel
         add(resultDescription);
         setBackground(new Color(0, 128, 210));
         setBorder(BorderFactory.createTitledBorder(getBorder(), "Input a Team name and press ENTER", TitledBorder.CENTER, TitledBorder.CENTER));
+    }
+    
+    private class textListener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            System.out.println("TEST");
+        }
     }
 }
