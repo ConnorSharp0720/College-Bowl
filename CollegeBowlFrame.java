@@ -62,6 +62,7 @@ public class CollegeBowlFrame extends JFrame
         exitButton = new JButton("Exit");
         // Register the action listeners
         exitButton.addActionListener(new ExitButtonListner());
+        topButton.addActionListener(new TopButtonListner());
         // adds the buttons
         buttonPanel.add(topButton);
         buttonPanel.add(exitButton);
@@ -75,6 +76,39 @@ public class CollegeBowlFrame extends JFrame
         {
             // exits the frame
             System.exit(0);
+        }
+    }
+    
+    private class TopButtonListner implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            Team top1 = new Team(0, "random");
+            Team top2 = new Team(0, "random");
+            Team top3 = new Team(0, "random");
+            
+            System.out.println("The Top 3 Teams are:");
+            
+            for(Team teamCompare: TeamList.getTeamList())
+            {
+                if(teamCompare.getScore() > top1.getScore())
+                {
+                    top3 = top2;
+                    top2 = top1;
+                    top1 = teamCompare;
+                }
+                else if(teamCompare.getScore() > top2.getScore())
+                {
+                    top3 = top2;
+                    top2 = teamCompare;
+                }
+                else if(teamCompare.getScore() > top3.getScore())
+                {
+                    top3 = teamCompare;
+                }
+            }
+            outputPanel.updateData(top1 + "\n" + top2 + "\n" + top3 + "\n");
         }
     }
 }

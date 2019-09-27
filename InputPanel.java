@@ -33,6 +33,7 @@ public class InputPanel extends JPanel
         teamButton = new JButton("TEAM");
         teamButton.addActionListener(new TeamButtonListner());
         scoreButton = new JButton("SCORE");
+        scoreButton.addActionListener(new ScoreButtonListner());
         
         bg.add(teamButton);
         bg.add(scoreButton);
@@ -50,6 +51,15 @@ public class InputPanel extends JPanel
         public void actionPerformed(ActionEvent e)
         {
             new TeamFrame();
+        }
+    }
+    
+    private class ScoreButtonListner implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            new ScoreFrame();
         }
     }
 }

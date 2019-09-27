@@ -3,8 +3,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.AbstractAction;
-import javax.swing.Action;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -17,6 +15,7 @@ public class TeamEnterPanel extends JPanel
     private static final long serialVersionUID = 5777740971062336138L;
     /** description area for data display */
     private JTextArea resultDescription;
+    JTextField teamName = new JTextField();
     
     public TeamEnterPanel() 
     {
@@ -27,7 +26,7 @@ public class TeamEnterPanel extends JPanel
         final int COLUMN_FIELD_HEIGHT = 3;
         setLayout(new GridLayout(2,1));
         
-        JTextField teamName = new JTextField();
+        //JTextField teamName = new JTextField();
         teamName.addActionListener(new textListener());
         
         //Creates, adds and styles the Panel
@@ -44,7 +43,12 @@ public class TeamEnterPanel extends JPanel
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            System.out.println("TEST");
+            Team tempTeam;
+            tempTeam = new Team(TeamList.getTeamList().size() + 1, teamName.getText());
+            //TeamList.addTeam(tempTeam);
+            System.out.println(teamName.getText());
+            resultDescription.setText(TeamList.addTeam(tempTeam));
+            teamName.setText("");
         }
     }
 }

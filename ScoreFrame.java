@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class TeamFrame extends JFrame
+public class ScoreFrame extends JFrame
 {
     private JPanel buttonPanel;
     /** exit button */
@@ -17,22 +17,21 @@ public class TeamFrame extends JFrame
     /** MesonetMain panel */
     private CollegeBowlMainPanel banner;
     /** TeamEnter Panel */
-    private TeamEnterPanel Tpanel;
-    
+    private ScoreEnterPanel Tpanel;
     
     /** serial number */
     private static final long serialVersionUID = 1L;
-    
-    public TeamFrame()
+
+    public ScoreFrame()
     {
-        super("Input Teams");
+        super("Input Scores");
         // styling for frame 
-        setPreferredSize(new Dimension(400,200));
+        setPreferredSize(new Dimension(250,200));
         setLayout(new BorderLayout());
         setResizable(true);
         buildButtonPanel();
         banner = new CollegeBowlMainPanel();
-        Tpanel = new TeamEnterPanel();
+        Tpanel = new ScoreEnterPanel();
         
         
         add(banner, BorderLayout.PAGE_START);
