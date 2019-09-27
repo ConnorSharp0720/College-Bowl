@@ -10,9 +10,7 @@ public class CollegeBowlMainPanel extends JPanel
      * Constructor for MesonetMainPanel that initializes it functionality
      */
     public CollegeBowlMainPanel() 
-    {
-        System.out.println("Building CollegeBowl Main panel");
-        
+    {   
         JLabel greetingLabel = new JLabel("College Bowl Calculator");
         
         // Add greeting to this panel

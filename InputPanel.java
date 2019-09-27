@@ -23,8 +23,6 @@ public class InputPanel extends JPanel
     
     public InputPanel()
     {
-        // message for user
-        System.out.println("Building Statistics panel");
         
         // creates a new button group
         bg = new ButtonGroup();

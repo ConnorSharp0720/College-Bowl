@@ -24,7 +24,7 @@ public class ScoreEnterPanel extends JPanel
     
     public ScoreEnterPanel() 
     {
-        System.out.println("Building Team Enter panel");
+        System.out.println("TEAM SCORE INPUT HISTORY");
         
         setLayout(new GridLayout(3,1));
         
@@ -69,6 +69,7 @@ public class ScoreEnterPanel extends JPanel
             int teamNUM = Integer.parseInt(teamNumber.getText());
             int teamSCORE = Integer.parseInt(teamScore.getText());
             TeamList.getTeam(teamNUM).addScore(teamSCORE);
+            System.out.println("Team Number " + teamNUM + " got " + teamSCORE + " points!");
             teamNumber.setText("");
             teamScore.setText("");
         }

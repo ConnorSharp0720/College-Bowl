@@ -13,7 +13,6 @@ public class OutputPanel extends JPanel
     
     public OutputPanel()
     {
-        System.out.println("Building Data panel");
         
         // Final variables for the JTextArea dimensions
         final int COLUMN_FIELD_WIDTH = 40;

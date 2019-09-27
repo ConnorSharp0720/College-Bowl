@@ -53,10 +53,7 @@ public class CollegeBowlFrame extends JFrame
     }
     
     private void buildButtonPanel()
-    {
-        // Create a panel for buttons.
-        System.out.println("Building Button panel");
-        
+    {   
         buttonPanel = new JPanel();
         topButton = new JButton("Top Scores");
         exitButton = new JButton("Exit");

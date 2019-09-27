@@ -48,10 +48,7 @@ public class TeamFrame extends JFrame
     }
     
     private void buildButtonPanel()
-    {
-        // Create a panel for buttons.
-        System.out.println("Building Button panel");
-        
+    {   
         buttonPanel = new JPanel();
         exitButton = new JButton("Exit");
         // Register the action listeners

@@ -19,7 +19,7 @@ public class TeamEnterPanel extends JPanel
     
     public TeamEnterPanel() 
     {
-        System.out.println("Building Team Enter panel");
+        System.out.println("LIST OF TEAM HISTORY");
         
         // Final variables for the JTextArea dimensions
         final int COLUMN_FIELD_WIDTH = 3;
@@ -46,8 +46,9 @@ public class TeamEnterPanel extends JPanel
             Team tempTeam;
             tempTeam = new Team(TeamList.getTeamList().size() + 1, teamName.getText());
             //TeamList.addTeam(tempTeam);
-            System.out.println(teamName.getText());
-            resultDescription.setText(TeamList.addTeam(tempTeam));
+            String result = TeamList.addTeam(tempTeam);
+            resultDescription.setText(result);
+            System.out.println(result);
             teamName.setText("");
         }
     }
